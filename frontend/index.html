@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medi-Queue | Real-Time Hospital Appointments</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/2966/2966486.png" alt="Medi-Queue Logo" />
+      <div>
+        <h2>MediQueue</h2>
+        <p>Real-time hospital appointment times</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <h1>Find the Nearest Hospital for Your Appointment</h1>
+    <p>Real-time scheduling from general visits to specialized care near you.</p>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search hospitals by name or location..." />
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" id="allBtn">All Appointments</button>
+      <button class="filter-btn" id="generalBtn">General Appointments</button>
+      <button class="filter-btn" id="machineBtn">Machine Appointments</button>
+      <button class="filter-btn" id="kidsBtn">Kids & Pregnancy</button>
+    </div>
+
+    <div id="hospital-list"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
