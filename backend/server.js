@@ -4,13 +4,18 @@ import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
 import hospitalRoutes from "./routes/hospitalRoutes.js";
+import queueRoutes from "./routes/queueRoutes.js";
+import patientRoutes from "./routes/patientRoutes.js";
 
 dotenv.config();
 const app = express();
 
 app.use(cors());
 app.use(express.json());
+
 app.use("/api/hospitals", hospitalRoutes);
+app.use("/api/queues", queueRoutes);
+app.use("/api/patients", patientRoutes);
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI)
